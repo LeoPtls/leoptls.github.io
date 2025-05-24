@@ -13,6 +13,17 @@
 - title: Education
   type: time_table
   contents:
+    - title: PHD in Optimal Transport and Optimization
+      institution: ENSEEIHT, Toulouse FR
+      year: 2023 - 2026
+      description:
+        - Optimal transport
+        - Measure quantization
+        - Lloyd's algorithm
+        - title: Under the supervision of
+          contents:
+            - Edouard Pauwels (TSE)
+            - Elsa Cazelles (INP Toulouse, IRIT, CNRS)
     - title: Master  Maths Research and Inovation (RI)
       institution: Université Paul Sabatier, Toulouse FR
       year: 2023
@@ -26,17 +37,6 @@
         - Differential Geometry
         - Topology
         - Algebra
-    - title: Licence of Mathematics for Research
-      institution: Université Paul Sabatier, Toulouse FR
-      year: 2021
-      description:
-        - Topology
-        - Graph Theory
-        - Complex analysis
-        - Algebra
-        - Differential calculus
-        - Probability theory
-        - ODE
     - title: Double Licence in Mathematics and economics
       institution: Toulouse School of Economics (TSE)
       year: 2022
@@ -49,22 +49,23 @@
         - Linear algebra
         - Econometrics
         - Programing (VBA and Python)
+    - title: Licence of Mathematics for Research
+      institution: Université Paul Sabatier, Toulouse FR
+      year: 2021
+      description:
+        - Topology
+        - Graph Theory
+        - Complex analysis
+        - Algebra
+        - Differential calculus
+        - Probability theory
+        - ODE
+  
 
 
 - title: Experience
   type: time_table
   contents:
-    - title: PHD in Optimal Transport and Optimization
-      institution: ENSEEIHT, Toulouse FR
-      year: 2023 - 2026
-      description:
-        - Optimal transport
-        - Measure quantization
-        - Lloyd's algorithm
-        - title: Under the supervision of
-          contents:
-            - Edouard Pauwels (TSE)
-            - Elsa Cazelles (INP Toulouse, IRIT, CNRS)
     - title: Teaching 1
       institution: Toulouse INP ENSEEIHT
       year: 2023-2026
