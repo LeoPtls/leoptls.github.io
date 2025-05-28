@@ -1,7 +1,7 @@
 github_users:
   - LeoPtls
 
-repo_description_lines_max: 2
+repo_description_lines_max: 5
 
 github_repos:
   - LeoPtls/sparse_barycenters
