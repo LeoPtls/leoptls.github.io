@@ -5,3 +5,5 @@ repo_description_lines_max: 2
 
 github_repos:
   - LeoPtls/leoptls.github.io
+  - LeoPtls/sparse_barycenters
+  - LeoPtls/lloyds_algo
