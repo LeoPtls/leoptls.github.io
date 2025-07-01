@@ -2,7 +2,7 @@
 layout: page
 permalink: /events/
 title: Events
-description: The following is a summary of the scientific events I attended. Events marked with 🗣️ Presented indicate that I delivered a presentation of my work.
+description: The following is a summary of the scientific events I attended. Events marked with "🗣️ Presented" indicate that I delivered a presentation of my work.
 nav: true
 nav_order: 6
 ---
