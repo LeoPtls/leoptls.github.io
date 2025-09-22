@@ -7,11 +7,15 @@ nav: true
 nav_order: 6
 ---
 
-You will find on this page a summary of my previous and ongoing teachings as well as useful materials for interested students.
+On this page, you will find an overview of my previous and ongoing teachings, along with useful materials for interested students.
 
-- Optimisation 
-- Probabilités
-- Intégration et Fourier
 
-Coming Soon
+### Courses
+- **Optimisation**
+- **Probabilités**
+- **Intégration et Fourier**
 
+
+
+### Useful Documents
+- Fiche de révision – Théorèmes principaux d’intégration : [📥 Download PDF](https://leoptls.github.io/assets/pdf/Fiche_de_cours_Théorèmes_principaux_d_intégration.pdf)
