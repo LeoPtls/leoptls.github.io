@@ -27,12 +27,42 @@ $(document).ready(function () {
     var $myNav = $(navSelector);
     Toc.init($myNav);
 
-    // Keep ScrollSpy highlight aligned with fixed header + heading scroll margin.
-    // This avoids highlighting the wrong TOC entry after clicking a section.
-    var scrollSpyOffset = 90;
+    // On CV page, avoid Bootstrap ScrollSpy mis-highlighting adjacent short sections.
+    // We keep TOC links, but control active state explicitly on click + hash changes.
+    var isCvPage = window.location.pathname.replace(/\/$/, "") === "/cv";
+    if (isCvPage) {
+      var setActiveCvToc = function (hash) {
+        if (!hash) return;
+        var normalizedHash = hash.startsWith("#") ? hash : "#" + hash;
+        var $links = $(navSelector + " a.nav-link");
+        $links.removeClass("active");
+        $links.filter('[href="' + normalizedHash + '"]').addClass("active");
+      };
+
+      $(navSelector).on("click", "a.nav-link", function () {
+        setActiveCvToc($(this).attr("href"));
+      });
+
+      $(window).on("hashchange", function () {
+        setActiveCvToc(window.location.hash);
+      });
+
+      setActiveCvToc(window.location.hash);
+      return;
+    }
+
+    // Keep ScrollSpy highlight aligned with the real sticky header height.
+    // This avoids activating the next section too early (e.g., Academic -> Other).
+    var navbarHeight = $(".navbar").outerHeight() || 0;
+    var scrollSpyOffset = Math.max(20, navbarHeight + 8);
     $("body").scrollspy({
       target: navSelector,
       offset: scrollSpyOffset,
+    });
+
+    // Ensure ScrollSpy recalculates positions after page/layout settles.
+    $(window).on("load", function () {
+      $("body").scrollspy("refresh");
     });
   }
 
