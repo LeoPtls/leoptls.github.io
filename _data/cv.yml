@@ -3,82 +3,60 @@
   contents:
     - name: Full Name
       value: Léo Portales
-    - name: Date of Birth
-      value: 24/10/1996
+    - name: Position
+      value: PhD Student in Optimal Transport and Machine Learning
     - name: Languages
       value:  French, English, Spanish
-    - name: Mail 
+    - name: Institution
+      value: IRIT, TSE, INP ENSEEIHT
+    - name: Mail
       value: Leo.Portales@irit.fr
+    - name: Website
+      value: https://leoptls.github.io/
 
 - title: Education
   type: time_table
   contents:
-    - title: PHD in Optimal Transport and Optimization
-      institution: ENSEEIHT, Toulouse FR
+    - title: PhD in Optimal Transport and Machine Learning
+      institution: IRIT, INP Toulouse, TSE, Toulouse
       year: 2023 - 2026
       description:
-        - Optimal transport
-        - Measure quantization
-        - Lloyd's algorithm
-        - title: Under the supervision of
-          contents:
-            - Edouard Pauwels (TSE)
-            - Elsa Cazelles (INP Toulouse, IRIT, CNRS)
-    - title: Master  Maths Research and Inovation (RI)
-      institution: Université Paul Sabatier, Toulouse FR
-      year: 2023
+        - Discretization by sampling for several optimal transport problems in machine learning.
+    - title: Master of Fundamental Mathematics - Research and Innovation
+      institution: University Paul Sabatier, Toulouse
+      year: 2021 - 2023
       description:
-        - Functional analysis
-        - Fourier transform and Distributions
-        - Stochastic processes and SDE
-        - Measure topology and optimal transport
-        - Random Matrices
-        - ODE & PDE
-        - Differential Geometry
-        - Topology
-        - Algebra
-    - title: Double Licence in Mathematics and economics
-      institution: Toulouse School of Economics (TSE)
-      year: 2022
+        - Fundamental mathematics track (research oriented).
+    - title: License of Fundamental Mathematics
+      institution: University Paul Sabatier, Toulouse
+      year: 2020 - 2021
       description:
-        - Macroeconomics
-        - Microeconomics
-        - Analysis
-        - ODE
-        - Probability theory and statistics
-        - Linear algebra
-        - Econometrics
-        - Programing (VBA and Python)
-    - title: Licence of Mathematics for Research
-      institution: Université Paul Sabatier, Toulouse FR
-      year: 2021
+        - Foundation in analysis, algebra, topology and probability.
+    - title: Double License in Economics and Applied Mathematics
+      institution: Toulouse School of Economics, Toulouse
+      year: 2017 - 2019
       description:
-        - Topology
-        - Graph Theory
-        - Complex analysis
-        - Algebra
-        - Differential calculus
-        - Probability theory
-        - ODE
+        - Quantitative training across economics and applied mathematics.
   
 
 
 - title: Experience
   type: time_table
   contents:
-    - title: Teaching 1
-      institution: Toulouse INP ENSEEIHT
-      year: 2023-2026
+    - title: Co-organizer of the IRIT SC-team PhD Seminar
+      institution: IRIT, Toulouse
+      year: 2025 - 2026
       description:
-        - Probability 
-        - Integration and Fourier transforms
-        - Statistics (Lab work)
-
-    - title: Teaching 2
-      institution: INSA Toulouse
-      year: 2024
+        - Co-organization of seminar activities for PhD students and researchers.
+    - title: Teaching
+      institution: INP ENSEEIHT and INSA Toulouse
+      year: 2023 - 2026
       description:
-        - Optimization and linear programing 
+        - Integration and Fourier series (tutorials)
+        - Probability (tutorials and lab sessions)
+        - Optimization (tutorials and lab sessions)
+        - Statistics (tutorials and lab sessions)
+        - Multivariate analysis (tutorials and lab sessions)
       
 
 - title: Academic Interests
@@ -86,22 +64,21 @@
   contents:
     - title: Optimal transport
       items:
-        - Semi discrete optimal transport
-        - Measure quantization 
-        - Sliced optimal transport
-        - Statistical aspect of Optimal transport
-    - title: Non-convex optimization
+        - Semi-discrete optimal transport
+        - Optimal transport barycenters with discrete support
+        - Statistical estimation of Monge transport maps
+        - Lloyd's algorithms and quantization
+    - title: Optimization
       items:
         - Gradient methods
-        - Kurdyka-Lojasiewicz inequality
-        - O-minimal geometry
+        - Sequential convergence analysis
     - title: Statistics
       items:
-        - Statistical Learning Theory
+        - Statistical learning theory
         - Empirical risk minimization
-        - Stochastic processes
+        - Statistical estimation in optimal transport
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Politics, Climbing, Fitness, Video games, Mangas
+    - <u>Computer skills:</u> Python, R, Matlab, VBA

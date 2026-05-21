@@ -26,8 +26,13 @@ $(document).ready(function () {
     var navSelector = "#toc-sidebar";
     var $myNav = $(navSelector);
     Toc.init($myNav);
+
+    // Keep ScrollSpy highlight aligned with fixed header + heading scroll margin.
+    // This avoids highlighting the wrong TOC entry after clicking a section.
+    var scrollSpyOffset = 90;
     $("body").scrollspy({
       target: navSelector,
+      offset: scrollSpyOffset,
     });
   }
 
