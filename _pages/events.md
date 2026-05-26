@@ -9,7 +9,7 @@ nav_order: 6
 
 ### 2025
 
-**Thematic Days on Optimal Transport — I2B Marseilles**  
+**Thematic Days on Optimal Transport — I2M Marseilles**  
 📅 October 9, 2025 · ⏱️ 1 hour · 🗣️ *Presented* · 📄 [Slides (PDF)](https://leoptls.github.io/assets/pdf/thematic_days_ot_i2b_marseille.pdf)
 
 **Workshop: Mean Field Games, Optimal Transport, and Machine Learning**  
