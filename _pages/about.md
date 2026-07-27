@@ -7,7 +7,7 @@ subtitle: <a href='https://www.irit.fr/'>IRIT</a> <a href='https://www.tse-fr.eu
 
 profile:
   align: right
-  image: photoleo1.jpg
+  image: photoleo3.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>2 Rue Charles Camichel</p>
