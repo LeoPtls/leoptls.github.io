@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: cv_leo_en.pdf
+cv_pdf: curriculum-vitae.pdf
 description: 
 toc:
   sidebar: left
