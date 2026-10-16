@@ -27,43 +27,56 @@ $(document).ready(function () {
     var $myNav = $(navSelector);
     Toc.init($myNav);
 
-    // On CV page, avoid Bootstrap ScrollSpy mis-highlighting adjacent short sections.
-    // We keep TOC links, but control active state explicitly on click + hash changes.
-    var isCvPage = window.location.pathname.replace(/\/$/, "") === "/cv";
+    // Follow the visible CV heading without ScrollSpy's forced last-section
+    // activation at the bottom of the page (several CV sections are short).
+    var isCvPage = $(".cv").length > 0;
     if (isCvPage) {
-      var setActiveCvToc = function (hash) {
-        if (!hash) return;
-        var normalizedHash = hash.startsWith("#") ? hash : "#" + hash;
-        var $links = $(navSelector + " a.nav-link");
-        $links.removeClass("active");
-        $links.filter('[href="' + normalizedHash + '"]').addClass("active");
+      var cvSections = $myNav.find("a.nav-link").toArray().map(function (link) {
+        return { link: link, heading: document.getElementById(decodeURIComponent(link.hash.slice(1))) };
+      }).filter(function (section) {
+        return section.heading;
+      });
+      var updateCvToc = function () {
+        var navbar = document.querySelector(".navbar.fixed-top, .navbar.sticky-top");
+        var threshold = (navbar ? navbar.getBoundingClientRect().bottom : 0) + 8;
+        var activeSection = cvSections[0];
+        cvSections.forEach(function (section) {
+          if (section.heading.getBoundingClientRect().top <= threshold) activeSection = section;
+        });
+        cvSections.forEach(function (section) {
+          var active = section === activeSection;
+          section.link.classList.toggle("active", active);
+          if (active) section.link.setAttribute("aria-current", "location");
+          else section.link.removeAttribute("aria-current");
+        });
       };
-
-      $(navSelector).on("click", "a.nav-link", function () {
-        setActiveCvToc($(this).attr("href"));
+      var cvTocFramePending = false;
+      var scheduleCvTocUpdate = function () {
+        if (cvTocFramePending) return;
+        cvTocFramePending = true;
+        window.requestAnimationFrame(function () {
+          cvTocFramePending = false;
+          updateCvToc();
+        });
+      };
+      $(window).on("scroll resize load hashchange", scheduleCvTocUpdate);
+      if (document.fonts) document.fonts.ready.then(scheduleCvTocUpdate);
+      updateCvToc();
+    } else {
+      // Keep ScrollSpy highlight aligned with the real sticky header height.
+      // This avoids activating the next section too early (e.g., Academic -> Other).
+      var navbarHeight = $(".navbar").outerHeight() || 0;
+      var scrollSpyOffset = Math.max(20, navbarHeight + 8);
+      $("body").scrollspy({
+        target: navSelector,
+        offset: scrollSpyOffset,
       });
 
-      $(window).on("hashchange", function () {
-        setActiveCvToc(window.location.hash);
+      // Ensure ScrollSpy recalculates positions after page/layout settles.
+      $(window).on("load", function () {
+        $("body").scrollspy("refresh");
       });
-
-      setActiveCvToc(window.location.hash);
-      return;
     }
-
-    // Keep ScrollSpy highlight aligned with the real sticky header height.
-    // This avoids activating the next section too early (e.g., Academic -> Other).
-    var navbarHeight = $(".navbar").outerHeight() || 0;
-    var scrollSpyOffset = Math.max(20, navbarHeight + 8);
-    $("body").scrollspy({
-      target: navSelector,
-      offset: scrollSpyOffset,
-    });
-
-    // Ensure ScrollSpy recalculates positions after page/layout settles.
-    $(window).on("load", function () {
-      $("body").scrollspy("refresh");
-    });
   }
 
   // add css to jupyter notebooks
